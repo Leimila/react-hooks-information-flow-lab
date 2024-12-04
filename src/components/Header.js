@@ -1,11 +1,15 @@
-import React from "react";
+// src/components/Header.js
+import React from 'react';
 
-const Header = ({ onDarkModeClick }) => {
+function Header({ onDarkModeClick, isDarkMode }) {
   return (
-    <div>
-      <button onClick={onDarkModeClick}> Dark Mode</button>
-    </div>
+    <header>
+      <h1>Shopping List</h1>
+      <button onClick={onDarkModeClick}>
+        {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
+    </header>
   );
-};
+}
 
 export default Header;
